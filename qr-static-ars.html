@@ -187,7 +187,7 @@
     }
 
     // Real-time listener for payment info
-    db.ref("upiData").on("value", snapshot => {
+    db.ref("upiData-ars").on("value", snapshot => {
       const data = snapshot.val();
       if (data && data.upiId && data.amount) {
         latestUpiId = data.upiId;
